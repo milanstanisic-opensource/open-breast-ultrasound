@@ -4,6 +4,8 @@ Research prototype for whole-image classification of breast ultrasound into `ben
 
 This repository is software. It is not a medical device, not a diagnosis, and not evidence that a model improves early detection. No BUSI model has been trained or measured for this release. See [docs/VALIDATION_REPORT.md](docs/VALIDATION_REPORT.md).
 
+WhyDonate link: https://whydonate.com/fundraising/open-breast-ultrasound-research
+
 ## What it does
 
 - Inventories a local BUSI-style folder without deleting images or masks.
