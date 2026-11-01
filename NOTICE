@@ -1,0 +1,26 @@
+Open Breast Ultrasound Research
+Copyright 2026 Srdjan Stanisic
+
+This project is licensed under the Apache License, Version 2.0.
+The license covers this repository's source code and the documentation
+written for it. It does not cover third-party data or weights.
+
+The BUSI images are not included. Their use is governed by the terms of the
+source you download them from, including the Kaggle dataset page if you use
+that mirror, and by the original publication:
+
+Al-Dhabyani W, Gomaa M, Khaled H, Fahmy A. Dataset of breast ultrasound images.
+Data in Brief. 2020;28:104863. https://doi.org/10.1016/j.dib.2019.104863
+
+ImageNet initialization weights are downloaded by Keras or TensorFlow when
+training is started with weights set to "imagenet". Those weights are not
+stored in this repository and are not licensed by the Apache-2.0 grant above.
+They are natural-image pretraining weights, not a breast-ultrasound model.
+
+A checkpoint trained by a user of this software is not automatically licensed
+for clinical use. Publish weights only if the dataset terms allow it, and say
+so in the checkpoint's own notice. This repository does not ship a trained
+checkpoint.
+
+EfficientNetB0 and the Keras / TensorFlow libraries remain under their own
+upstream licenses.

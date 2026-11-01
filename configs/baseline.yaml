@@ -1,0 +1,33 @@
+# Baseline for Open Breast Ultrasound Research.
+# Pixels are fed as float32 RGB in [0, 255]. EfficientNet's internal Rescaling
+# layer divides by 255. Do not also divide by 255 or call preprocess_input.
+seed: 42
+image_size: 224
+batch_size: 16
+classes:
+  - benign
+  - malignant
+  - normal
+model:
+  backbone: EfficientNetB0
+  weights: imagenet
+  dropout: 0.2
+  fine_tune_from: block6
+training:
+  phase1_epochs: 10
+  phase2_epochs: 10
+  early_stopping_patience: 3
+  learning_rate_phase1: 0.001
+  learning_rate_phase2: 0.00001
+  loss: sparse_categorical_crossentropy
+  focal_gamma: 2.0
+  use_class_weight: true
+augmentation:
+  horizontal_flip: true
+  rotation_degrees: 15
+  contrast: 0.1
+decision:
+  # Predefined research threshold. Not clinically approved.
+  # Use validation_max_f1 to choose a threshold on validation F1 before test evaluation.
+  malignant_threshold: 0.5
+  threshold_policy: predefined

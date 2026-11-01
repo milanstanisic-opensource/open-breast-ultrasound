@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "open-breast-ultrasound"
+version = "0.1.0"
+description = "Research prototype for three-class breast ultrasound image classification. Not a medical device."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "Srdjan Stanisic"}]
+keywords = ["breast-ultrasound", "research", "medical-imaging"]
+dependencies = [
+  "numpy>=1.24,<2.2",
+  "Pillow>=10,<12",
+  "PyYAML>=6,<7",
+  "tensorflow>=2.16,<2.21",
+  "gradio>=4.44,<6",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+obu = "open_breast_ultrasound.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+  "integration: tests that build a small TensorFlow model and do not download ImageNet weights",
+]

@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: Open Breast Ultrasound Research
+message: >-
+  If you use this software, cite the code and the dataset papers listed in
+  docs/DATA_CARD.md. A DOI, repository URL, and release date are omitted on
+  purpose until a real public release exists.
+type: software
+authors:
+  - family-names: Stanisic
+    given-names: Srdjan
+version: 0.1.0
+license: Apache-2.0
+abstract: >-
+  Research prototype that inventories breast ultrasound images and can train
+  an EfficientNetB0 three-class whole-image classifier. Not a medical device.
+  Classification performance has not been evaluated in this release.

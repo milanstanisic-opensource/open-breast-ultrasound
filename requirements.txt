@@ -1,0 +1,5 @@
+numpy>=1.24,<2.2
+Pillow>=10,<12
+PyYAML>=6,<7
+tensorflow>=2.16,<2.21
+gradio>=4.44,<6
